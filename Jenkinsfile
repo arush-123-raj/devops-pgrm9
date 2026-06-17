@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage('checkout'){
-            steps{git branch:params.BRANCH_NAME url:url.git}
+            steps{git branch:params.BRANCH_NAME, url:url.git}
         } 
         stage("Build"){
             steps{ sh 'mvn clean package'}
