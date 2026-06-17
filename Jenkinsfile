@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage('checkout'){
-            steps{git branch:params.BRANCH_NAME url:'https://github.com/anishudupan-rns/devops-pgrm9.git'}
+            steps{git branch:params.BRANCH_NAME, url:'https://github.com/anishudupan-rns/devops-pgrm9.git'}
         }
         stage("Build"){
             steps{ sh 'mvn clean package'}
